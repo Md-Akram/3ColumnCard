@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+ --brightOrange : hsl(31, 77%, 52%);
+ --darkCyan : hsl(184, 100%, 22%);
+ --veryDarkCyan : hsl(179, 100%, 13%);
+
+ --transparentWhite : hsla(0, 0%, 100%, 0.75);
+ --veryLightGray : hsl(0, 0%, 95%)
+
+}
+
+body{
+ margin: 0;
+ font-size: 15px;
+ font-family: 'Lexend Deca','Big Shoulders Display', sans-serif;
+
+ background-color: var(--veryLightGray);
+}
+
+ .cards{
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+
+.card-1, .card-2, .card-3{
+ width: 50%;
+ padding: 40px;
+}
+
+.card-1{
+ background-color: var(--brightOrange) ;
+ margin-top: 50px;
+ border-radius: 10px 10px 0 0;
+}
+.card-2{
+ background-color: var(--darkCyan);
+}
+.card-3{
+ background-color: var(--veryDarkCyan);
+ margin-bottom: 50px;
+ border-radius: 0 0 10px 10px;
+}
+
+h1{
+ font-family:'Big Shoulders Display' ;
+ font-weight: 700;
+ font-size: 32px;
+ color: var(--veryLightGray);
+}
+p{
+ color: var(--transparentWhite)
+}
+button{
+ outline: none;
+ border: none;
+ margin: 10px 0;
+ padding: 15px 30px;
+ border-radius: 50px;
+ font-size: 15px;
+ font-family: 'Lexend Deca';
+ background-color: var(--veryLightGray);
+ border: 2px solid transparent;
+ transition: .3s;
+}
+
+.card-1>button{
+ color: var(--brightOrange) ;
+}
+.card-1>button:hover{
+ color: var(--transparentWhite) ;
+ background-color: var(--brightOrange);
+ border: 2px solid var(--transparentWhite);
+ cursor: pointer;
+}
+.card-2>button{
+ color: var(--darkCyan) ;
+}
+.card-2>button:hover{
+ color: var(--transparentWhite) ;
+ background-color: var(--darkCyan);
+ border: 2px solid var(--transparentWhite);
+ cursor: pointer;
+}
+.card-3>button{
+ color: var(--veryDarkCyan) ;
+}
+.card-3>button:hover{
+ color: var(--transparentWhite) ;
+ background-color: var(--veryDarkCyan);
+ border: 2px solid var(--transparentWhite);
+ cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    width: 80%;
+    margin:0 auto ;
+    margin-bottom: 30px;
+    }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  }
+
+@media screen and (min-width: 880px) {
+  .cards {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+  }
+  .card-1,.card-2,.card-3{
+   width: 200px;
+   margin: 0;
+   border-radius: 0;
+  }
+  .card-1{
+   border-radius: 10px 0 0 10px;
+  }
+  .card-3{
+   border-radius: 0 10px 10px 0;
+  }
+  
+}
